@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Вопросы для оператора</title>
+        <meta charset="UTF-8">
+         <style>
+              textarea {
+                /*min-height: 50px;*/
+                /*padding: 10px;*/
+                font-size: 20px;
+                /*line-height: 1.5;*/
+                /*resize: none; !* disable resizing *!*/
+              }
+         </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity=
+                "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity=
+                "sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity=
+                "sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light text-white" style="background-color: rgba(151,21,254,0.93)">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" style=" color: #F0CA65;font-weight: bold;">
+                    Tech Suppy
+                </a>
+                <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/upload" style=" color: #F0CA65;font-weight: bold;">Загрузить документацию</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/queries" style=" color: #F0CA65;font-weight: bold;">Вопросы для оператора</a>
+                      </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="btn btn-danger"><a href="/logout">Выйти</a></div>
+                </form>
+            </div>
+        </nav>
+         <div class="card text-center">
+        {% if not messages %}
+      <h5 style="color: #cdae50;">На данный момент вопросов нет</h5>
+      {% else %}
+             <h5 style="color: #cdae50;">На эти вопросы бот не смог ответить:</h5>
+         <div class="list-group d-flex justify-content-center align-items-center" style="align:center; max-width: 30rem;">
+              {% for m in messages %}
+                    <a href="/queries/{{m.id}}" class="list-group-item list-group-item-action ">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">{{m.query}}</h5>
+                          <small>{{m.date.strftime('%d')}}.{{m.date.strftime('%m')}}.{{m.date.year}} {{m.date.strftime('%H')}}:{{m.date.strftime('%M')}}:{{m.date.strftime('%S')}}</small>
+                        </div>
+                        <small>Чат: {{m.user_id}}</small>
+                    </a>
+              {% endfor %}
+        </div>
+             {% endif %}
+       </div>
+    </body>
+</html>

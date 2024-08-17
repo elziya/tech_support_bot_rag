@@ -1,0 +1,5 @@
+EMBEDDING_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+GPT_MODEL_NAME = "ai-forever/rugpt3large_based_on_gpt2"
+CHUNKS_PATH = "../docs/docs_chunks.jsonl"
+DOCS_PATH = "../docs/docs.jsonl"
+CROSS_ENCODER_NAME = "DiTy/cross-encoder-russian-msmarco"

@@ -1,0 +1,14 @@
+langchain
+transformers
+sentence-transformers
+unstructured
+aiogram
+pyTelegramBotAPI
+psycopg2
+langchain_community
+sklearn
+flask
+gigachat
+aioschedule
+flask-bcrypt
+clickhouse-connect
