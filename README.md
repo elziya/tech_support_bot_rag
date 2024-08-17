@@ -20,8 +20,11 @@
 
 ## Реализация технологии RAG с использованием модели GPT
 ![4](https://github.com/elziya/tech_support_bot_rag/raw/main/images/4.png)
+
 ![5](https://github.com/elziya/tech_support_bot_rag/raw/main/images/5.png)
+
 ![6](https://github.com/elziya/tech_support_bot_rag/raw/main/images/6.png)
+
 ![7](https://github.com/elziya/tech_support_bot_rag/raw/main/images/7.png)
 
 ## Оценка качества реализованного RAG
