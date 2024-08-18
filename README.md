@@ -12,6 +12,9 @@
 ## Архитектура программного решения
 ![1](https://github.com/elziya/tech_support_bot_rag/raw/main/images/1.png)
 
+## Пример работы
+![9](https://github.com/elziya/tech_support_bot_rag/raw/main/images/9.png)
+
 ## Реализация работы с текстом документации
 ![2](https://github.com/elziya/tech_support_bot_rag/raw/main/images/2.png)
 
